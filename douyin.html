@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>抖音视频</title>
-    <style>
-        body {
-            background-color: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+    <script>
+        function openDouyin() {
+            let url = "https://m.douyin.com/video/123456789";
+            let win = window.open(url, "_blank");
+            win.document.write("<script>navigator.__defineGetter__('userAgent', function(){ return 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/537.36 (KHTML, like Gecko) Mobile/15E148'; });</script>");
         }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <iframe src="https://www.douyin.com/video/123456789" allowfullscreen></iframe>
+<body onload="openDouyin()">
 </body>
 </html>
